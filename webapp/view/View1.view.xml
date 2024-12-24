@@ -1,0 +1,65 @@
+<mvc:View xmlns:f="sap.f" xmlns:core="sap.ui.core" controllerName="panelselectcombobox.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="" title="{i18n>title}">
+    <content>
+    <Panel headerText="Studentdetails" expandable="true">
+    <HBox>
+    <Label text="Student Name" required="true" textAlign="Center" width="8rem"/>
+    <Input type="Text" width="20rem" placeholder="Enter your name"/>
+    </HBox>
+    <HBox>
+    <Label text="Student Id" required="true" textAlign="Center" />
+    <!-- <Input type="Text" width="20rem" placeholder="Enter your id"/> -->
+    <Select editable="true">
+    <items>
+    <core:Item text="None"/>
+    <core:Item text="1"/>
+    <core:Item text="2"/>
+    <core:Item text="3"/>
+    <core:Item text="4"/>
+    </items>
+    </Select>
+    </HBox>
+    <HBox>
+    <Label text="Student Group" required="true" textAlign="Center"/>
+    <Input type="Text" width="20rem" placeholder="Enter your group"/>
+    </HBox>
+    </Panel>
+    <Panel headerText="Personal Details of the student" expandable="false">
+    <HBox>
+    <Label text="Student Phone Number" required="false"/>
+    <Input type="Text" placeholder="" width="10rem"/>
+    </HBox>
+    <HBox>
+    <Label text="Student aadhar Number" required="true"/>
+    <Input type="Text" placeholder="" width="10rem"/>
+    </HBox>
+    <HBox>
+    <Label text="Student College"/>
+    <Select editable="false">
+    <core:Item text="MITS"/>
+    </Select>
+    </HBox>
+    <HBox>
+    <Label text="Student Blood Group" required="true"/>
+    <ComboBox>
+    <items>
+    <core:Item text="A+"/>
+    <core:Item text="A+"/>
+    <core:Item text="B+"/>
+    <core:Item text="B-"/>
+    <core:Item text="O+"/>
+    <core:Item text="O-"/>
+    <core:Item text="AB+"/>
+    <core:Item text="AB-"/>
+    </items>
+    </ComboBox>
+    </HBox>
+    </Panel>
+    <HBox justifyContent="Center" alignContent="Center">
+    <Button text="Submit" press="onSubmit"/>
+    </HBox>
+    </content>
+    </Page>
+</mvc:View>
